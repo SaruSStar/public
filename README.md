@@ -1,1 +1,60 @@
-# public
+<body>
+  <div id="loading">
+    <div class="loader"></div>
+    <div>Loading...</div>
+  </div>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+
+<style>
+  #loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    z-index: 9999;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-top-color: #2196f3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+
+<script>
+  window.addEventListener('flutter-first-frame', function () {
+    const loading = document.getElementById('loading');
+
+    if (loading) {
+      loading.remove();
+    }
+  });
+</script>
+
+
+<div id="loading">
+  <img src="icons/logo.png" width="100" />
+
+  <div class="loading-spinner"></div>
+
+  <div class="loading-text">
+    Loading application...
+  </div>
+</div>
+
+
